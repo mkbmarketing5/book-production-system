@@ -44,25 +44,3 @@ export interface CoverDesign {
   created_at: string;
   updated_at: string;
 }
-
-export interface StyleGuide {
-  id: string;
-  project_id: string;
-  voice_instructions: string;
-  tone_examples?: string[];
-  formatting_rules?: Record<string, string>;
-  pen_name?: string;
-  created_at: string;
-  updated_at: string;
-}
-
-export interface ExportJob {
-  id: string;
-  project_id: string;
-  format: 'pdf' | 'docx' | 'epub' | 'kdp_print';
-  status: 'pending' | 'processing' | 'completed' | 'failed';
-  file_url?: string;
-  error_message?: string;
-  created_at: string;
-  updated_at: string;
-}
